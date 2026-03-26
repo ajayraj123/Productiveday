@@ -1,5 +1,5 @@
 import React from 'react';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createHashRouter, RouterProvider } from 'react-router-dom';
 import { AppProvider } from './store/AppContext';
 import { AppShell } from './components/layout/AppShell';
 import { DashboardPage } from './components/dashboard/DashboardPage';
@@ -14,7 +14,7 @@ function NotificationScheduler() {
   return null;
 }
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: '/',
     element: <AppShell />,
